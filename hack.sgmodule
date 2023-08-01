@@ -35,7 +35,7 @@ Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|sub
 
 #************************************#
 [MITM]
-hostname = %APPEND% 
+hostname = %APPEND%
 # 经济学人·商论
  api.hummingbird.businessreview.global,
 # Notability
