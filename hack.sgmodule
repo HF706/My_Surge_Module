@@ -1,0 +1,48 @@
+#!url=https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.sgmodule
+#!name=App解锁合集
+#!desc=转载于chxm1023
+
+#=============UserScript=============#
+
+[Script]
+
+.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/kwyy.js
+
+#************************************#
+# Moji辞书-学习日语
+# hostname = api.mojidict.com
+Moji辞书 = type=http-response,pattern=^https?:\/\/api\.mojidict\.com\/parse\/functions\/getNPrivileges,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mojics.js
+
+#************************************#
+# Xmind-思维导图
+# hostname = www.xmind.*
+Xmind-思维导图 = type=http-response,pattern=^https?:\/\/www\.xmind\.(cn|net|app)\/.+\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js
+
+#************************************#
+# WPS Office
+# hostname = *.wps.cn
+WPS = type=http-response,pattern=^https?:\/\/(vas|account|drive)\.wps\.cn\/(query\/api\/.+\/list_purchase_info|api\/(v\d\/spaces|users\/.+\/overview)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/WPS.js
+
+#************************************#
+# 经济学人·商论
+# hostname = api.hummingbird.businessreview.global
+经济学人 = type=http-response,pattern=^https:\/\/api\.hummingbird\.businessreview\.global\/api\/subscriptions\/get_active,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/jjxrsl.js
+
+#************************************#
+# Notability
+# hostname = notability.com
+Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
+
+#************************************#
+[MITM]
+hostname = %APPEND% 
+# 经济学人·商论
+api.hummingbird.businessreview.global,
+# Notability
+notability.com,
+# WPS Office
+*.wps.cn,
+# Xmind-思维导图
+www.xmind.*,
+# Moji辞书-学习日语
+api.mojidict.com
