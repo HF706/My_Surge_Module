@@ -37,12 +37,12 @@ Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|sub
 [MITM]
 hostname = %APPEND% 
 # 经济学人·商论
-api.hummingbird.businessreview.global,
+ api.hummingbird.businessreview.global,
 # Notability
-notability.com,
+ notability.com,
 # WPS Office
-*.wps.cn,
+ *.wps.cn,
 # Xmind-思维导图
-www.xmind.*,
+ www.xmind.*,
 # Moji辞书-学习日语
-api.mojidict.com
+ api.mojidict.com
