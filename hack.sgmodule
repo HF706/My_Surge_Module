@@ -40,5 +40,10 @@ goodnotes6 = type=http-response,pattern=^https:\/\/isi\.csan\.goodnotes\.com\/.+
 goodnotes = type=http-request,pattern=^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/goodnotes6.js
 
 #************************************#
+# 牛津高阶词典第十版
+# hostname = oxfordx.cp.com.cn
+牛津高阶词典 = type=http-response,pattern=^https:\/\/oxfordx\.cp\.com\.cn\/api\/pay\/apple_notify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/niujin10.js
+
+#************************************#
 [MITM]
-hostname = %APPEND% api.hummingbird.businessreview.global, notability.com, isi.csan.goodnotes.com, *.wps.cn, www.xmind.*, api.mojidict.com
+hostname = %APPEND% api.hummingbird.businessreview.global, notability.com, isi.csan.goodnotes.com, oxfordx.cp.com.cn, *.wps.cn, www.xmind.*, api.mojidict.com
