@@ -2,11 +2,12 @@
 #!name=App解锁合集
 #!desc=转载于chxm1023
 
+[Map Local]
+# 牛津高阶词典-去除首页下方广告
+^https:\/\/oxadmin\.cp\.com\.cn\/api\/(hot\/index|advertise\/banner) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 #=============UserScript=============#
 
 [Script]
-
-.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/kwyy.js
 
 #************************************#
 # Moji辞书-学习日语
@@ -44,9 +45,8 @@ ggg = type=http-request,pattern=^https:\/\/isi\..*\.g.*\.com\/.+\/(receipts$|sub
 # hostname = oxfordx.cp.com.cn
 牛津高阶词典 = type=http-response,pattern=^https:\/\/oxfordx\.cp\.com\.cn\/api\/pay\/apple_notify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/niujin10.js
 
-#************************************#
+#************************************
 
-http-request ^https:\/\/sapi\.beingfine\.cn\/v3\/bb\/reward\/by-sign-in script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js
-cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js
+
 [MITM]
-hostname = %APPEND% api.hummingbird.businessreview.global, notability.com, isi.*.g*.com, oxfordx.cp.com.cn, *.wps.cn, www.xmind.*, api.mojidict.com, sapi.beingfine.cn
+hostname = %APPEND% api.hummingbird.businessreview.global, notability.com, isi.*.g*.com, oxfordx.cp.com.cn, *.wps.cn, www.xmind.*, api.mojidict.com
